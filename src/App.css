@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+}
+
+.app {
+  background-color: white;
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: black;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "inp inp inp inp"
+    "display display display display"
+    "display display display display"
+    ". . . ."
+    ". . . ."
+    ". . . ."
+    ". . . ."
+    ". zero . eq";
+  width: 25rem;
+  height: 40rem;
+  margin: auto auto;
+  background: #ded7d7;
+}
+.inputs {
+  grid-area: inp;
+  background: #607d8b;
+  font-size: 1.5em;
+  color: white;
+  padding: 1rem;
+  overflow-x: overlay;
+}
+.display {
+  grid-area: display;
+  background: #607d8b;
+  font-size: 3em;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.eq {
+  grid-area: eq;
+  background: #607d8b;
+  color: white;
+}
+
+.w {
+  background-color: white;
+}
+
+.cursor {
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}

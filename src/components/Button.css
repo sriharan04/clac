@@ -1,0 +1,21 @@
+.btn {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: darkgray;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.eq {
+  grid-area: eq;
+  background: #607d8b;
+  color: white;
+}
+
+.w {
+  background-color: white;
+}
