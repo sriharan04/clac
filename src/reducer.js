@@ -123,20 +123,22 @@ const reducer = (state, action) => {
       if (state.list) {
         console.log(state.list.length);
         if (state.list.length > 1) {
+          console.log(state.list[state.list.length - 2], "hitt", state.num1);
           return {
             ...state,
             value: state.list[state.list.length - 2],
             num1: state.list[state.list.length - 2],
-            list: state.list.splice(state.list.length - 1, 1),
+            list: state.list.slice(0, state.list.length - 1),
             viewlist: state.viewlist.slice(0, state.viewlist.length - 2),
             num2: "",
           };
         } else if (state.list.length > 0) {
+          console.log(state.list[0], "hitt1", state.num1);
           return {
             ...state,
             value: 0,
-            num1: state.viewlist.length - 1,
-            list: state.list.splice(state.list.length - 1, 1),
+            num1: state.viewlist[0],
+            list: state.list.slice(0, state.list.length - 1),
             viewlist: state.viewlist.slice(0, state.viewlist.length - 2),
             num2: "",
           };
